@@ -11,29 +11,11 @@
         <span class="URLinput_wrapper">
             <!-- We used to have an autofocus attribute on this field but it triggerd a very specific CSS bug: https://github.com/Rudloff/alltube/issues/117 -->
             <input class="URLinput large-font" type="url" name="url" id="url"
-                   required placeholder="http://example.com/video"/>
+                   required placeholder="https://movie-ttv.herokuapp.com/video"/>
         </span>
             {if $config->uglyUrls}
                 <input type="hidden" name="page" value="info"/>
-            {/if}
-            <input class="downloadBtn large-font" type="submit" value="{t}Download{/t}"/><br/>
-            {if $config->convert}
-                <div class="mp3 small-font">
-                    <div class="mp3-inner">
-                        <input type="checkbox" id="audio" class="audio" name="audio">
-                        <label for="audio"><span class="ui"></span>
-                            {t}Audio only (MP3){/t}
-                        </label>
-                        <div class="seekOptions">
-                            <label for="from">{t}From{/t}</label> <input type="text" pattern="(\d+:)?(\d+:)?\d+(\.\d+)?"
-                                                                         placeholder="HH:MM:SS" value="" name="from"
-                                                                         id="from"/>
-                            <label for="to">{t}to{/t}</label> <input type="text" pattern="(\d+:)?(\d+:)?\d+(\.\d+)?"
-                                                                     placeholder="HH:MM:SS" value="" name="to" id="to"/>
-                        </div>
-                    </div>
-                </div>
-            {/if}
+            {/if}         
         </div>
     </form>
     <a class="combatiblelink small-font" href="{path_for name="extractors"}">{t}See all supported websites{/t}</a>

@@ -77,7 +77,7 @@
                 {/if}
                 {if $config->stream}
                     <input type="checkbox" {if $config->stream != 'ask'}checked{/if} name="stream" id="stream"/>
-                    <label for="stream">{t}Stream the video through the server{/t}</label>
+                    <label for="stream">{t}تحميل مباشر{/t}</label>
                     <br/>
                     <br/>
                 {/if}
