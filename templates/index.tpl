@@ -11,11 +11,15 @@
         <span class="URLinput_wrapper">
             <!-- We used to have an autofocus attribute on this field but it triggerd a very specific CSS bug: https://github.com/Rudloff/alltube/issues/117 -->
             <input class="URLinput large-font" type="url" name="url" id="url"
-                   required placeholder="https://movie-ttv.herokuapp.com/video"/>
+                   required placeholder="http://example.com/video"/>
         </span>
             {if $config->uglyUrls}
                 <input type="hidden" name="page" value="info"/>
-            {/if}         
+            {/if}
+            <input class="downloadBtn large-font" type="submit" value="{t}Download{/t}"/><br/>
+            {if $config->convert}
+
+            {/if}
         </div>
     </form>
     <a class="combatiblelink small-font" href="{path_for name="extractors"}">{t}See all supported websites{/t}</a>
